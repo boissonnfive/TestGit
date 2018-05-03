@@ -2,7 +2,7 @@
 
 # +---------------------------------------------------------------------------+
 # | Télécharge un dépôt à partir de GitHub. (fichier double clicable)         |
-# | Usage:  .download_git_repo.command                                        |
+# | Usage:  .download_git_repo.command  nomDepot                              |
 # +---------------------------------------------------------------------------+
 
 # +---------------------------------------------------------------------------+
@@ -13,7 +13,8 @@
 # +---------------------------------------------------------------------------+
 
 
-curl -L -o master.zip http://github.com/boissonnfive/VBScript/zipball/master/
+DEPOT=${1}
+curl -L -o master.zip http://github.com/boissonnfive/${DEPOT}/zipball/master/
 
 
 # source 1 : Télécharger un dépôt github               : http://stackoverflow.com/a/18222354
